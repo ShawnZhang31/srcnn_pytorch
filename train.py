@@ -85,7 +85,7 @@ if __name__ == '__main__':
                 t.set_postfix(loss='{:.6f}'.format(epoch_losses.avg))
                 t.update(len(inputs))
 
-        torch.save(model.state_dict(), os.path.join(args.outputs_dir, 'epoch_{}.pth'.format(epoch)))
+        # torch.save(model.state_dict(), os.path.join(args.outputs_dir, 'epoch_{}.pth'.format(epoch)))
 
         model.eval()
         epoch_psnr = AverageMeter()
